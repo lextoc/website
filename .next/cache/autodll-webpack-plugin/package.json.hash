@@ -1,0 +1,1 @@
+{"name":"alexanderclaes","version":"1.0.0","main":"index.js","license":"MIT","scripts":{"dev":"next","build":"next build","start":"next start"},"dependencies":{"@material-ui/core":"^4.8.3","@material-ui/icons":"^4.5.1","next":"^9.2.0","react":"^16.12.0","react-dom":"^16.12.0","react-ga":"^2.7.0"},"readme":"ERROR: No README data found!","_id":"alexanderclaes@1.0.0"}
