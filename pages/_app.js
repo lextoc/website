@@ -49,6 +49,12 @@ export default class MyApp extends App {
               font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
                 monospace;
             }
+
+            ::selection {
+              background-color: #673ab7;
+              background: #673ab7;
+              color: white;
+            }
           `}</style>
         </Head>
         <ThemeProvider theme={theme}>
