@@ -35,21 +35,7 @@ export default class MyApp extends App {
           <meta name="msapplication-config" content="/static/browserconfig.xml" />
           <meta name="theme-color" content="#ffffff" />
           <meta property="og:image" content="/static/background.jpeg" />
-          <style jsx global>{`
-            body {
-              margin: 0;
-              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-                sans-serif;
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-            }
-
-            code {
-              font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-                monospace;
-            }
-
+          <style>{`
             ::selection {
               background-color: #673ab7;
               background: #673ab7;
