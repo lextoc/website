@@ -224,11 +224,11 @@ function Index() {
       </Container>
       <Box className={classes.footer} color="text.secondary" fontSize="small" m={1}>
         Made with{' '}
-        <Link href="https://nextjs.org/" target="_blank" onClick={handleNextJSClick}>
+        <Link href="https://nextjs.org/" target="_blank" onClick={handleNextJSClick} title="Go to Next.js website">
           Next.js
         </Link>{' '}
         and{' '}
-        <Link href="https://material-ui.com/" target="_blank" onClick={handleMaterialUIClick}>
+        <Link href="https://material-ui.com/" target="_blank" onClick={handleMaterialUIClick} title="Go to Material UI website">
           Material UI
         </Link>{' '}
         <span role="img" aria-label="love heart">
