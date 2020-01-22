@@ -130,6 +130,18 @@ function Index() {
       action: 'Clicked LinkedIn Link',
     });
   };
+  const handleNextJSClick = () => {
+    ReactGA.event({
+      category: 'Outbound',
+      action: 'Clicked NextJS Link',
+    });
+  };
+  const handleMaterialUIClick = () => {
+    ReactGA.event({
+      category: 'Outbound',
+      action: 'Clicked Material UI Link',
+    });
+  };
   const handleClose = () => {
     setOpenDialogResume(false);
   };
@@ -212,11 +224,11 @@ function Index() {
       </Container>
       <Box className={classes.footer} color="text.secondary" fontSize="small" m={1}>
         Made with{' '}
-        <Link href="https://nextjs.org/" target="_blank">
+        <Link href="https://nextjs.org/" target="_blank" onClick={handleNextJSClick}>
           Next.js
         </Link>{' '}
         and{' '}
-        <Link href="https://material-ui.com/" target="_blank">
+        <Link href="https://material-ui.com/" target="_blank" onClick={handleMaterialUIClick}>
           Material UI
         </Link>{' '}
         <span role="img" aria-label="love heart">
