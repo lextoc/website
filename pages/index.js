@@ -1,4 +1,5 @@
 import Avatar from '@material-ui/core/Avatar';
+import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
@@ -16,6 +17,8 @@ import DialogResume from '../components/DialogResume';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    display: 'flex',
+    flexDirection: 'column',
     position: 'relative',
     zIndex: 1,
     minHeight: '100vh',
@@ -79,6 +82,16 @@ const useStyles = makeStyles(theme => ({
       margin: theme.spacing(0.5),
     },
   },
+  footer: {
+    marginTop: 'auto',
+    paddingTop: '6em',
+    textAlign: 'right',
+    opacity: '0.8',
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center',
+      paddingBottom: '1em',
+    },
+  }
 }));
 
 /**
@@ -197,6 +210,19 @@ function Index() {
           </IconButton>
         </Box>
       </Container>
+      <Box className={classes.footer} color="text.secondary" fontSize="small" m={1}>
+        Made with{' '}
+        <Link href="https://nextjs.org/" target="_blank">
+          Next.js
+        </Link>{' '}
+        and{' '}
+        <Link href="https://material-ui.com/" target="_blank">
+          Material UI
+        </Link>{' '}
+        <span role="img" aria-label="love heart">
+          ❤️
+        </span>
+      </Box>
     </div>
   );
 }
