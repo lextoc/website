@@ -24,6 +24,17 @@ export default class MyApp extends App {
           <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+          <link rel="image_src" href="/static/background.jpeg" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
+          <link rel="manifest" href="/static/site.webmanifest" />
+          <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#5d31aa" />
+          <link rel="shortcut icon" href="/static/favicon.ico" />
+          <meta name="msapplication-TileColor" content="#00aba9" />
+          <meta name="msapplication-config" content="/static/browserconfig.xml" />
+          <meta name="theme-color" content="#ffffff" />
+          <meta property="og:image" content="/static/background.jpeg" />
           <style jsx global>{`
             body {
               margin: 0;
