@@ -138,7 +138,7 @@ function DialogResume(props) {
             2012 - 2016
           </Typography>
           <Typography gutterBottom variant="body2">
-            I attained my professional bachelor at Karel de Grote. The course
+            I attained my professional bachelor at Karel de Grote. The
             curriculum included web development, programming, design and
             usability.
           </Typography>
