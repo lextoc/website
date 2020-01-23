@@ -164,8 +164,7 @@ function Index() {
             </Typography>
             <Typography gutterBottom color="textSecondary">
               Front-end engineer with a passion for web performance. I love
-              keeping code simple and scalable. Using tools like Vim and
-              linters to work fast yet clean. Based in Antwerp, Belgium.{' '}
+              keeping code simple and scalable. Based in Antwerp, Belgium.{' '}
               <span role="img" aria-label="waving hand">
                 👋
               </span>{' '}
