@@ -151,7 +151,6 @@ function DialogResume(props) {
         <Button
           href="/static/resume_alexander_claes.pdf"
           download
-          target="_blank"
           onClick={handleDownloadClick}
           color="primary"
           startIcon={<GetAppIcon />}
