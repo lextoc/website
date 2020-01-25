@@ -37,9 +37,9 @@ export default class MyApp extends App {
           <meta property="og:image" content="/static/background.jpeg" />
           <style>{`
             ::selection {
-              background-color: #673ab7;
-              background: #673ab7;
-              color: white;
+              background-color: white;
+              background: white;
+              color: #2B195E;
             }
           `}</style>
         </Head>
