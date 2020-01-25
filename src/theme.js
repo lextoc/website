@@ -7,8 +7,17 @@ import { createMuiTheme } from '@material-ui/core/styles';
  */
 const theme = createMuiTheme({
   palette: {
-    primary: { main: '#673ab7' },
+    common: {
+      black: '#fff',
+      white: '#000',
+    },
+    type: 'dark',
+    primary: { main: '#7542FF' },
     secondary: { main: '#651fff' },
+    background: {
+      paper: '#fff',
+      default: '#2B195E',
+    },
   },
   typography: {
     body1: {
