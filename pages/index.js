@@ -20,6 +20,7 @@ const useStyles = makeStyles(theme => ({
     minHeight: '100vh',
     position: 'relative',
     overflow: 'hidden',
+    background: 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.01), transparent)',
     ['&::before']: {
       content: '""',
       borderRadius: '90%',
