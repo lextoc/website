@@ -108,14 +108,17 @@ const useStyles = makeStyles(theme => ({
   },
   avatar: {
     boxShadow: `0 2px 4px rgba(31, 18, 65, 0.4)`,
+    backgroundColor: '#1F1241',
     borderRadius: '50%',
     border: '1px solid #1F1241',
     margin: '4em auto 0',
     display: 'block',
-    width: '50vw',
-    maxWidth: '200px',
+    width: '200px',
+    height: '200px',
+    overflow: 'hidden',
     [theme.breakpoints.down('sm')]: {
-      maxWidth: '160px',
+      width: '160px',
+      height: '160px',
     },
   },
 }));
