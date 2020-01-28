@@ -34,7 +34,11 @@ export default class MyApp extends App {
           <meta name="msapplication-TileColor" content="#00aba9" />
           <meta name="msapplication-config" content="/static/browserconfig.xml" />
           <meta name="theme-color" content="#ffffff" />
+          <meta name="description" content="Front-end engineer with a passion for web performance. I love keeping code simple and scalable. Based in Antwerp, Belgium." />
+          <meta name="keywords" content="alexander claes, alexander, claes" />
           <meta property="og:image" content="/static/background.jpeg" />
+          <meta property="og:title" content="Alexander Claes" />
+          <meta property="og:description" content="Front-end engineer with a passion for web performance. I love keeping code simple and scalable. Based in Antwerp, Belgium." />
           <style>{`
             ::selection {
               background-color: white;
