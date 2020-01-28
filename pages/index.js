@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     minHeight: '100vh',
     position: 'relative',
     overflow: 'hidden',
-    background: 'linear-gradient(to bottom right, transparent 0%, rgba(255, 255, 255, 0.07) 30%, transparent 100%)',
+    background: 'linear-gradient(to bottom right, transparent 0%, rgba(255, 255, 255, 0.125) 30%, transparent 100%)',
     backgroundPosition: '70% 50%',
     backgroundSize: '300% 300%',
     // animation: 'backgroundPosition 30s ease infinite',
