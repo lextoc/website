@@ -14,13 +14,17 @@ import ReactGA from 'react-ga';
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
+    alignItems: 'center',
     flexDirection: 'column',
     position: 'relative',
     zIndex: 1,
     minHeight: '100vh',
     position: 'relative',
     overflow: 'hidden',
-    background: 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.01), transparent)',
+    background: 'linear-gradient(to bottom right, transparent 0%, rgba(255, 255, 255, 0.07) 30%, transparent 100%)',
+    backgroundPosition: '70% 50%',
+    backgroundSize: '300% 300%',
+    // animation: 'backgroundPosition 30s ease infinite',
     ['&::before']: {
       content: '""',
       borderRadius: '90%',
@@ -36,6 +40,8 @@ const useStyles = makeStyles(theme => ({
       background: '#1F1241',
       display: 'block',
       transform: 'skewY(-12deg)',
+      // animation: 'borderRadius 30s ease infinite',
+      boxShadow: `0 0 25px #2B195E`,
     },
     ['&::after']: {
       content: '""',
@@ -51,17 +57,23 @@ const useStyles = makeStyles(theme => ({
       background: '#1F1241',
       display: 'block',
       transform: 'skewY(-12deg)',
+      boxShadow: `0 0 75px #2B195E inset`,
       backgroundImage: 'url("/static/background.jpeg")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       opacity: '0.06',
-    }
+      // animation: 'borderRadius2 30s ease infinite',
+    },
+  },
+  content: {
+    marginTop: 'auto',
+    marginBottom: 'auto',
   },
   name: {
     fontSize: '2.5rem',
     fontWeight: 700,
     color: 'white',
-    marginTop: '0.7em',
+    marginTop: '0.6em',
     [theme.breakpoints.down('sm')]: {
       marginTop: '0.3em',
     },
@@ -85,6 +97,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   footer: {
+    width: `calc(100% - ${theme.spacing(1)}px - ${theme.spacing(1)}px)`,
     marginTop: 'auto',
     paddingTop: '6em',
     textAlign: 'right',
@@ -95,14 +108,15 @@ const useStyles = makeStyles(theme => ({
     },
   },
   avatar: {
+    boxShadow: `0 0 25px #2B195E`,
     borderRadius: '50%',
     border: '4px solid #1F1241',
     margin: '4em auto 0',
     display: 'block',
     width: '50vw',
-    maxWidth: '300px',
-    [theme.breakpoints.down('md')]: {
-      maxWidth: '260px',
+    maxWidth: '200px',
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '160px',
     },
   },
 }));
@@ -151,7 +165,7 @@ function Index() {
   }
   return (
     <div className={classes.root}>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" className={classes.content}>
         <img
           alt="Alexander Claes"
           src="/static/avatar.jpg"

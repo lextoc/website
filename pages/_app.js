@@ -41,6 +41,21 @@ export default class MyApp extends App {
               background: white;
               color: #2B195E;
             }
+            @keyframes backgroundPosition {
+              0% { background-position: 70% 50% }
+              50% { background-position: 50% 50% }
+              100% { background-position: 70% 50% }
+            }
+            @keyframes borderRadius {
+              0% { border-radius: 90% 90% 90% 90% }
+              50% { border-radius: 80% 90% 85% 90% }
+              100% { border-radius: 90% 90% 90% 90% }
+            }
+            @keyframes borderRadius2 {
+              0% { border-radius: 90% 90% 90% 90%; transform: skewY(-12deg) }
+              50% { border-radius: 80% 90% 85% 90%; transform: skewY(-12deg) scale(0.985) }
+              100% { border-radius: 90% 90% 90% 90%; transform: skewY(-12deg) }
+            }
           `}</style>
         </Head>
         <ThemeProvider theme={theme}>
