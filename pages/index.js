@@ -41,7 +41,6 @@ const useStyles = makeStyles(theme => ({
       display: 'block',
       transform: 'skewY(-12deg)',
       // animation: 'borderRadius 30s ease infinite',
-      boxShadow: `0 0 25px #2B195E`,
     },
     ['&::after']: {
       content: '""',
@@ -108,9 +107,9 @@ const useStyles = makeStyles(theme => ({
     },
   },
   avatar: {
-    boxShadow: `0 0 25px #2B195E`,
+    boxShadow: `0 2px 4px rgba(31, 18, 65, 0.4)`,
     borderRadius: '50%',
-    border: '4px solid #1F1241',
+    border: '1px solid #1F1241',
     margin: '4em auto 0',
     display: 'block',
     width: '50vw',
