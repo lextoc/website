@@ -1,15 +1,16 @@
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Divider from '@material-ui/core/Divider';
-import Link from '@material-ui/core/Link';
-import Typography from '@material-ui/core/Typography';
-import GetAppIcon from '@material-ui/icons/GetApp';
-import React from 'react';
-import ReactGA from 'react-ga';
+import Box from "@material-ui/core/Box";
+import Button from "@material-ui/core/Button";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import Divider from "@material-ui/core/Divider";
+import Link from "@material-ui/core/Link";
+import Typography from "@material-ui/core/Typography";
+import GetAppIcon from "@material-ui/icons/GetApp";
+import React from "react";
+
+import ANALYTICS from "../src/analytics";
 
 /**
  * Returns resume dialog.
@@ -20,39 +21,8 @@ import ReactGA from 'react-ga';
  */
 function DialogResume(props) {
   const { handleClose, open } = props;
-  const handleScorrdClick = () => {
-    ReactGA.event({
-      category: 'Outbound',
-      action: 'Clicked Scorrd Link',
-      label: 'Inside Resume Dialog',
-    });
-  };
-  const handleWwwetClick = () => {
-    ReactGA.event({
-      category: 'Outbound',
-      action: 'Clicked Wwwet Link',
-      label: 'Inside Resume Dialog',
-    });
-  };
-  const handleLetsOrderItClick = () => {
-    ReactGA.event({
-      category: 'Outbound',
-      action: 'Clicked LetsOrderIt Link',
-      label: 'Inside Resume Dialog',
-    });
-  };
-  const handleDownloadClick = () => {
-    ReactGA.event({
-      category: 'Resume',
-      action: 'Clicked Download Link',
-      label: 'Inside Resume Dialog',
-    });
-  };
   const onClose = () => {
-    ReactGA.event({
-      category: 'Resume',
-      action: 'Closed Dialog',
-    });
+    ANALYTICS.handleCloseDialog();
     handleClose();
   };
   return (
@@ -91,7 +61,7 @@ function DialogResume(props) {
             <Link
               href="https://scorrd.com/"
               target="_blank"
-              onClick={handleScorrdClick}
+              onClick={ANALYTICS.handleScorrdClick}
             >
               https://scorrd.com/
             </Link>
@@ -100,7 +70,7 @@ function DialogResume(props) {
             <Link
               href="https://worldwide-wet.com/"
               target="_blank"
-              onClick={handleWwwetClick}
+              onClick={ANALYTICS.handleWwwetClick}
             >
               https://worldwide-wet.com/
             </Link>
@@ -118,11 +88,11 @@ function DialogResume(props) {
           <Typography gutterBottom variant="body2">
             During my internship I built a Ruby on Rails application which
             allowed multiple companies from the same building to order lunch
-            from a restaurant. It’s still in use today at{' '}
+            from a restaurant. It’s still in use today at{" "}
             <Link
               href="http://www.letsorderit.be/"
               target="_blank"
-              onClick={handleLetsOrderItClick}
+              onClick={ANALYTICS.handleLetsOrderItClick}
             >
               http://www.letsorderit.be/
             </Link>
@@ -151,7 +121,7 @@ function DialogResume(props) {
         <Button
           href="/static/resume_alexander_claes.pdf"
           download
-          onClick={handleDownloadClick}
+          onClick={ANALYTICS.handleDownloadClick}
           color="primary"
           startIcon={<GetAppIcon />}
         >
