@@ -1,0 +1,11 @@
+# Hidden files that shouldn't be ignored
+!.eslintrc.js
+!.prettierrc.js
+!.stylelintrc.js
+!.pug-lintrc.js
+
+# Third party
+**/node_modules
+
+# Strapi
+**/strapi
