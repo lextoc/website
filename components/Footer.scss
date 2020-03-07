@@ -1,0 +1,39 @@
+@import "../src/variables";
+
+.Footer {
+  margin-top: auto;
+  background-color: $dark;
+  background: linear-gradient(
+    to bottom right,
+    lighten($dark, 12%),
+    darken($dark, 5%)
+  );
+
+  &__inner {
+    padding: 60px 80px;
+  }
+
+  figure {
+    margin-top: 2rem;
+    max-width: 180px;
+  }
+
+  .logo {
+    width: 180px;
+    height: 180px;
+    border-width: 9px;
+
+    div {
+      font-size: 100px;
+    }
+  }
+
+  a {
+    color: rgba(white, 0.9);
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.032em;
+    text-decoration: none;
+  }
+}

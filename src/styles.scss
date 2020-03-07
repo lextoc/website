@@ -1,0 +1,308 @@
+@import "./variables.scss";
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+button,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+::selection {
+  background: $primary;
+  color: white;
+}
+
+h1 {
+  font-family: "Poppins";
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 0.875em;
+  margin-bottom: 0.5em;
+  color: $secondary;
+
+  @media (min-width: $sm) {
+    font-size: 50px;
+  }
+
+  @media (min-width: $md) {
+    font-size: 60px;
+  }
+
+  @media (min-width: $lg) {
+    font-size: 80px;
+  }
+}
+
+h2 {
+  font-family: "Poppins";
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.032em;
+  line-height: 0.875em;
+  max-width: 10em;
+  margin-bottom: 0.5em;
+  color: $secondary;
+
+  &::first-letter {
+    // color: $primary;
+    // font-size: 1.25em;
+  }
+
+  span {
+    // color: rgba($primary, 0.95);
+    color: lighten($primary, 2.5%);
+  }
+}
+
+h3 {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 0.875em;
+  margin-bottom: 0.5em;
+  color: $secondary;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 500;
+  max-width: 40em;
+  line-height: 1.65em;
+  margin-bottom: 0.75em;
+  color: rgba($secondary, 0.8);
+
+  &.large {
+    letter-spacing: 0.02em;
+    line-height: 1.45em;
+    color: rgba($secondary, 0.9);
+    font-weight: 400;
+
+    @media (min-width: $md) {
+      font-size: 20px;
+    }
+  }
+
+  &.sub {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: $primary;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.15em 0.5em 0;
+    border-radius: 2px;
+    background: rgba($primary, 0.1);
+    display: inline-block;
+
+    @media (min-width: $md) {
+      font-size: 1rem;
+    }
+  }
+
+  a {
+    display: inline-block;
+    color: rgba($secondary, 0.8);
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1.15em;
+    padding: 2px 0 0;
+    border-bottom: 2px solid rgba($primary, 0.6);
+
+    &:hover,
+    &:focus {
+      // border-color: $primary;
+      background: rgba($dark, 0.1);
+      background: linear-gradient(
+        to bottom right,
+        rgba($dark, 0.03),
+        rgba($dark, 0.1)
+      );
+    }
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+.btn {
+  background: 0;
+  cursor: pointer;
+  border-radius: 2px;
+  display: inline-block;
+  font-family: "Poppins";
+  font-weight: 700;
+  color: $secondary;
+  padding: 1.25em 2.5em;
+
+  &:not(.btn--primary) {
+    text-decoration: underline;
+  }
+
+  &--primary {
+    margin-top: 2em;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background-color: $primary;
+    background: linear-gradient(
+      to bottom right,
+      lighten($primary, 5%),
+      darken($primary, 5%)
+    );
+    color: white;
+
+    &:hover,
+    &:focus {
+      background: darken($primary, 4%);
+    }
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2vw;
+  max-width: $max-lg-xl;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+  width: 300px;
+  height: 300px;
+  background-color: $dark;
+  background: radial-gradient($secondary, darken($dark, 5%));
+  border-radius: 50%;
+  border: 16px solid $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    background: -webkit-linear-gradient(white, lighten($dark, 66%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: white;
+    font-size: 180px;
+    font-weight: 900;
+    font-family: "Poppins";
+  }
+}

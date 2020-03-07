@@ -1,0 +1,22 @@
+$xs: 320px;
+$sm: 600px;
+$md: 960px;
+$lg: 1280px;
+$xl: 1920px;
+$max-xs: $xs - 1px;
+$max-sm: $sm - 1px;
+$max-md: $md - 1px;
+$max-lg: $lg - 1px;
+$max-xl: $xl - 1px;
+$xs-sm: $xs + round(($sm - $xs) / 2);
+$sm-md: $sm + round(($md - $sm) / 2);
+$md-lg: $md + round(($lg - $md) / 2);
+$lg-xl: $lg + round(($xl - $lg) / 2);
+$max-xs-sm: $xs-sm - 1;
+$max-sm-md: $sm-md - 1;
+$max-md-lg: $md-lg - 1;
+$max-lg-xl: $lg-xl - 1;
+
+$dark: #232640;
+$primary: #00c293;
+$secondary: lighten($dark, 12%);
