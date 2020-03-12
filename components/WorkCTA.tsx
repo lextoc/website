@@ -21,7 +21,7 @@ const WorkCTA: React.FC = (): React.ReactElement => {
             <p>
               Next to my full-time job, I&apos;m available as a freelance web
               engineer and designer. Do you have an application, website or MVP
-              that needs to be build? Are you having trouble finding a talented
+              that needs to be built? Are you having trouble finding a talented
               developer?
             </p>
             <p>
