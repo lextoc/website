@@ -49,7 +49,7 @@ class CookiesSnackbar extends Component<{}, { isAccepted: boolean }> {
           }}
           message={
             <span>
-              In order to analyse usage of this site cookies are used, by
+              In order to analyse usage of this site cookies are used. By
               continuing to browse this site you agree to the use of cookies.
             </span>
           }
