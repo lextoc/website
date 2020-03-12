@@ -17,7 +17,7 @@ const CaseCard: React.FC<Props> = ({ data }): React.ReactElement => {
   const handleClick = (e: any) => {
     e.preventDefault();
     ANALYTICS.handleCaseCardClick(data);
-    window.history.pushState({}, data.link);
+    window.location.href = data.link;
   };
   return (
     <a
