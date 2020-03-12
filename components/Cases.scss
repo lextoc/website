@@ -1,0 +1,89 @@
+@import "../src/variables";
+
+.Cases {
+  &__container {
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0px 3px 3px -2px rgba($dark, 0.1),
+      0px 3px 4px 0px rgba($dark, 0.07), 0px 1px 8px 0px rgba($dark, 0.06);
+  }
+
+  &__inner {
+    padding-top: 0;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    display: inline-block;
+    padding-top: 1.05em;
+    text-align: center;
+
+    @media (min-width: $md) {
+      padding-top: 1.5em;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1.5em;
+    padding-right: 1em;
+    padding-left: 1em;
+
+    @media (min-width: $md) {
+      margin-bottom: 3em;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.25em;
+    margin-left: -0.25em;
+    width: calc(100% + 0.5em);
+
+    @media (min-width: $md) {
+      margin-right: -0.75em;
+      margin-left: -0.75em;
+      width: calc(100% + 1.5em);
+    }
+
+    @media (min-width: $lg) {
+      margin-right: -0.5em;
+      margin-left: -0.5em;
+      width: calc(100% + 1em);
+    }
+
+    @media (min-width: $lg-xl) {
+      margin-right: -1em;
+      margin-left: -1em;
+      width: calc(100% + 2em);
+    }
+  }
+
+  &__CaseCard {
+    width: 100%;
+    padding: 0.25em;
+
+    @media (min-width: $sm) {
+      width: 50%;
+    }
+
+    @media (min-width: $md) {
+      padding: 0.75em;
+    }
+
+    @media (min-width: $lg) {
+      padding: 0.5em;
+      width: 33.333333%;
+    }
+
+    @media (min-width: $lg-xl) {
+      padding: 1em;
+    }
+  }
+}

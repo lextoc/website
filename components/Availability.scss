@@ -1,0 +1,59 @@
+@import "../src/variables";
+
+.Availability {
+  position: relative;
+  min-height: 1.75rem;
+  background: $dark;
+
+  @media (min-width: $xs-sm) {
+    min-height: 1.5rem;
+  }
+
+  &__inner {
+    background: rgba($dark, 0.925);
+    backdrop-filter: saturate(220%) blur(20px);
+    text-align: center;
+    text-decoration: none;
+
+    @media (min-width: $md) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    &:hover,
+    &:focus {
+      background: rgba(lighten($dark, 12%), 0.925);
+    }
+
+    p {
+      max-width: none;
+      margin: 0;
+      color: rgba(white, 0.8);
+      padding: 0.1em 1em 0;
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 2em;
+      overflow: hidden;
+
+      @media (min-width: $xs-sm) {
+        font-size: 0.97rem;
+        padding: 0.25em 1em 0.15em;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        margin-right: 0.6em;
+        width: 7px;
+        height: 7px;
+        vertical-align: 2px;
+        border-radius: 50%;
+        background: $primary;
+        animation: blink 2s ease-in-out infinite;
+      }
+    }
+  }
+}

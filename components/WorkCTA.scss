@@ -1,0 +1,60 @@
+@import "../src/variables";
+
+.WorkCTA {
+  background-color: $dark;
+  background: radial-gradient($secondary, darken($dark, 5%));
+  color: white;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $max-md) {
+      flex-direction: column;
+    }
+
+    & > div {
+      &:nth-child(2) {
+        transform: scale(0.8);
+
+        @media (max-width: $max-lg-xl) {
+          transform: scale(0.75);
+        }
+
+        @media (max-width: $max-lg) {
+          transform: scale(0.6);
+        }
+
+        @media (max-width: $max-md) {
+          margin-top: -6.5rem;
+          margin-bottom: -6.5rem;
+          transform: scale(0.375);
+          display: none;
+        }
+      }
+
+      @media (min-width: $md) {
+        width: 50%;
+      }
+    }
+
+    h2 {
+      color: white;
+    }
+
+    p {
+      &,
+      & a {
+        color: rgba(white, 0.85);
+      }
+
+      & a {
+        &:hover,
+        &:focus {
+          background: rgba(white, 0.1);
+        }
+      }
+    }
+  }
+}

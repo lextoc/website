@@ -1,77 +1,43 @@
 @import "../src/variables";
 
 @keyframes blink {
+  30% {
+    opacity: 1;
+  }
   50% {
     opacity: 0;
+  }
+  70% {
+    opacity: 1;
   }
 }
 
 .Home {
-  &__availability {
-    background: $dark;
-    text-align: center;
-
-    p {
-      max-width: none;
-      margin: 0;
-      color: rgba(white, 0.8);
-      padding: 0.25em 1em;
-      font-size: 1rem;
-      font-weight: 500;
-
-      &::before {
-        content: "";
-        display: inline-block;
-        margin-right: 0.6em;
-        width: 8px;
-        height: 8px;
-        vertical-align: 1px;
-        border-radius: 50%;
-        background: $primary;
-        animation: blink 2s ease-in-out infinite;
-      }
-    }
-  }
-
-  &__dark-background {
-    background-color: $dark;
-    background: radial-gradient($secondary, darken($dark, 5%));
-    color: white;
-  }
-
-  &__dark-background-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 80px;
-
-    & > div {
-      width: 50%;
-    }
-
-    h2 {
-      color: white;
-    }
-
-    p {
-      &,
-      & a {
-        color: rgba(white, 0.9);
-      }
-    }
+  &__header-wrapper {
+    background-color: white;
+    background: radial-gradient(
+      white,
+      rgba($primary, 0.005),
+      rgba($primary, 0.01)
+    );
   }
 
   &__header {
     background-color: white;
-    background: url("/pattern.png") repeat center;
+    background: url("/dots.png") repeat center;
+    mix-blend-mode: multiply;
     position: relative;
     text-align: center;
-    padding: 3rem 1rem calc(3rem + 40px);
+    padding: 2rem 1rem calc(1rem + 40px);
     position: relative;
 
+    @media (min-width: $sm) {
+      padding: 3rem 1rem calc(3rem + 40px);
+    }
+
     @media (min-width: $md) {
-      padding-top: 5rem;
-      padding-bottom: calc(5rem + 80px);
+      padding-top: 7rem;
+      padding-bottom: calc(7rem + 80px);
     }
 
     & > * {
@@ -89,7 +55,7 @@
     .sub {
       margin-bottom: 1em;
       border: 4px solid white;
-      background: #eef8f4;
+      background: #e8f8f3;
     }
 
     .description {
@@ -105,11 +71,12 @@
     border-radius: 50%;
     border: 8px solid white;
     margin: 0 auto 0.75rem;
-    width: 176px;
+    width: 156px;
     height: auto;
 
     @media (min-width: $md) {
       margin-bottom: 2rem;
+      width: 176px;
     }
   }
 
@@ -121,31 +88,8 @@
     }
   }
 
-  &__skills {
-    background: white;
-  }
-
-  &__skills-inner {
-    padding: 60px 80px;
-  }
-
-  &__content {
-    margin: -80px auto 200px;
-    padding: 20px 3vw;
-    width: 100%;
-    background: white;
-    border-radius: 2px;
-    position: relative;
-    z-index: 2;
-
-    @media (min-width: $md) {
-      padding: 60px 80px;
-    }
-  }
-
   &__cta {
     margin: 0 auto -40px;
-    padding: 60px 80px;
     width: 100%;
     background: white;
     border-radius: 2px;
@@ -165,49 +109,94 @@
     }
   }
 
-  // &__button {
-  //   padding: 1.2rem 1.5rem;
-  //   font-size: 12px;
-  //   letter-spacing: 0.2em;
-  //   text-transform: uppercase;
-  //   // background: $primary;
-  //   // color: white;
-  //   color: $background;
-  //   background: white;
-  //   cursor: pointer;
-  //   border-radius: 2px;
-  //   display: inline-block;
-  //   font-family: "Poppins";
-  //   font-weight: 700;
-
-  //   &:hover,
-  //   &:focus {
-  //     background: darken($primary, 4%);
-  //   }
-  // }
-
   &__about-me {
     display: flex;
     align-items: flex-end;
-    margin: 20px auto;
     width: 100%;
     position: relative;
     z-index: 2;
+    flex-direction: column;
 
     @media (min-width: $md) {
-      padding: 60px 80px;
+      flex-direction: row;
+      margin-bottom: 8rem;
     }
 
     & > figure,
     & > div {
-      width: 50%;
+      @media (min-width: $lg) {
+        width: 50%;
+      }
+    }
+
+    & > figure {
+      @media (max-width: $max-lg) {
+        width: 30%;
+      }
+
+      @media (max-width: $max-md) {
+        margin: 0 auto 1rem;
+        width: 100%;
+        max-width: 180px;
+      }
+    }
+
+    & > div {
+      position: relative;
+      z-index: 1;
+
+      @media (max-width: $max-lg) {
+        width: 70%;
+      }
+
+      @media (max-width: $max-md) {
+        width: 100%;
+        max-width: 40rem;
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
 
     img {
       display: block;
       width: 100%;
       height: auto;
-      padding-right: 5rem;
+
+      @media (min-width: $md) {
+        margin-left: -20px;
+        margin-right: -40px;
+        transform: translateY(30px);
+        width: calc(100% + 60px);
+      }
+
+      @media (min-width: $lg) {
+        margin-left: 0;
+        transform: translateX(20px) translateY(60px);
+        padding-right: 4rem;
+        max-width: 700px;
+      }
+    }
+  }
+
+  &__header-wrapper + .WorkCTA {
+    padding-bottom: 80px;
+
+    @media (min-width: $md) {
+      padding-bottom: 110px;
+    }
+  }
+
+  .WorkCTA + .Cases {
+    margin-top: -80px;
+
+    @media (min-width: $md) {
+      margin-top: -90px;
+    }
+  }
+
+  .container + .WorkCTA {
+    @media (min-width: $md) {
+      padding-bottom: 40px;
     }
   }
 }

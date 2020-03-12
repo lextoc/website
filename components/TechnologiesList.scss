@@ -1,0 +1,57 @@
+@import "../src/variables";
+
+.TechnologiesList {
+  background-color: $background;
+  background: linear-gradient(to bottom, white, rgba(white, 0.65));
+  border-top: 1px solid rgba($dark, 0.025);
+  overflow: hidden;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    overflow-x: auto;
+  }
+
+  &__link {
+    display: block;
+    margin: 0.75rem 1rem;
+    opacity: 0.75;
+    transform: scale(0.8);
+    transition: opacity 0.4s, transform 0.4s;
+
+    @media (min-width: $md) {
+      margin: 1rem 1.5rem;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      transform: scale(0.85);
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__image {
+    display: block;
+    height: 36px;
+    width: auto;
+    mix-blend-mode: multiply;
+
+    @media (min-width: $md) {
+      height: 60px;
+    }
+
+    &--small {
+      padding: 0.25rem 0;
+
+      @media (min-width: $md) {
+        padding: 1rem 0;
+      }
+    }
+  }
+}

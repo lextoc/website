@@ -2,7 +2,11 @@ import { NextPage } from "next";
 import React from "react";
 import ReactGA from "react-ga";
 
+import Availability from "../components/Availability";
+import Cases from "../components/Cases";
 import Footer from "../components/Footer";
+import TechnologiesList from "../components/TechnologiesList";
+import WorkCTA from "../components/WorkCTA";
 import ANALYTICS from "../src/analytics";
 import "./index.scss";
 
@@ -18,65 +22,29 @@ const Home: NextPage = (): React.ReactElement => {
   }
   return (
     <div className={NAME}>
-      <div className={`${NAME}__availability`}>
-        <p>Currently available for new opportunities!</p>
-      </div>
-      <header className={`${NAME}__header`}>
-        <img
-          src="/avatar.jpg"
-          alt="Alexander Claes"
-          className={`${NAME}__avatar`}
-        />
-        <div className={`${NAME}__title`}>
-          <p className="sub">I&apos;m Alexander Claes, a professional ...</p>
-          <br />
-          <h1>Full Stack Web Engineer</h1>
-        </div>
-        <p className="large description">
-          ... building web applications with a passion for UI &amp; UX. I love
-          keeping code simple and scalable. Based in Antwerp, Belgium.
-        </p>
-      </header>
-      {/* <div className={`${NAME}__skills`}>
-        <div className="container">
-          <div className={`${NAME}__skills-inner`}>
-            Here comes a list of icons of all the frameworks and libraries I use
+      <Availability />
+      <div className={`${NAME}__header-wrapper`}>
+        <header className={`${NAME}__header`}>
+          <img
+            src="/avatar.jpg"
+            alt="Alexander Claes"
+            className={`${NAME}__avatar`}
+          />
+          <div className={`${NAME}__title`}>
+            <p className="sub">I&apos;m Alexander Claes, a professional ...</p>
+            <br />
+            <h1>Full Stack Web Engineer</h1>
           </div>
-        </div>
-      </div> */}
-      <div className={`${NAME}__dark-background`}>
-        <div className="container">
-          <div className={`${NAME}__dark-background-inner`}>
-            <div>
-              <p className="sub">Let&apos;s do this</p>
-              <h2>
-                Do you have a project for me?
-                <br />I love <span>working</span>
-              </h2>
-              <p>
-                Next to my full-time job, I&apos;m available as a freelance web
-                engineer and designer. Do you have an application or MVP that
-                needs to be build? Are you having trouble finding a talented
-                developer?
-              </p>
-              <p>
-                Hesitate no longer and contact me. With over 4 years of
-                experience in over <a href="#">15+ projects</a>, I&apos;m the
-                developer for your next venture.{" "}
-                <strong>Let&apos; get in touch!</strong>
-              </p>
-              <button className="btn btn--primary">Get in touch</button>
-            </div>
-            <div>
-              <div className="logo">
-                <div>A</div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <p className="large description">
+            ... building web applications with a passion for UI &amp; UX. I love
+            keeping code simple and scalable. Based in Antwerp, Belgium.
+          </p>
+        </header>
       </div>
+      <WorkCTA />
+      <Cases />
       <div className="container">
-        <div className={`${NAME}__about-me`}>
+        <div className={`${NAME}__about-me inner`}>
           <figure>
             <img src="/rocket.svg" alt="Rocket" />
           </figure>
@@ -96,27 +64,48 @@ const Home: NextPage = (): React.ReactElement => {
               <strong>a successful venture.</strong>
             </p>
             <p>
-              In order to do this, not only the concept has to be changed, but
+              In order to do this, not only the concept has to be adapted, but
               the application as well. That&apos;s where I jump in. I will make
-              sure bottlenecks and roadblocks are discovered before making
-              technological decisions and keep the application flexible by
-              choosing the right stack.
+              sure bottlenecks and roadblocks are discovered early on before
+              making technological decisions and keep the application flexible
+              by choosing the right stack.
             </p>
             <p>
               And on top of that, if your concept works,{" "}
-              <strong>the application will scale with your new features</strong>{" "}
+              <strong>
+                the application will scale with your new features and expanding
+                userbase
+              </strong>{" "}
               thanks to a clean approach with best practices.
+              <br />
+              <br />
             </p>
-            <button className="btn btn--primary">Tell me more</button>
-            <button className="btn">Best practices?</button>
+            <p>
+              Ready to{" "}
+              <a
+                href="mailto:alexander.claes10@gmail.com?subject=Let's do this!"
+                title="Mail me"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                start your venture
+              </a>
+              ?
+            </p>
+            {/* <div className="btns">
+              <button className="btn btn--primary">Tell me more</button>
+              <button className="btn">Best practices?</button>
+            </div> */}
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className={`${NAME}__cta`}>
+      {/* <TechnologiesList /> */}
+      <WorkCTA />
+      {/* <div className="container">
+        <div className={`${NAME}__cta inner`}>
           <h3>Subscribe to my newsletter</h3>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
