@@ -36,6 +36,7 @@ module.exports = {
     {
       files: ["**/*.ts", "**/*.tsx"],
       rules: {
+        "jsdoc/require-param": 0,
         "jsdoc/require-returns": 0
       }
     },
