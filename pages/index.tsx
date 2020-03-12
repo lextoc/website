@@ -4,6 +4,7 @@ import ReactGA from "react-ga";
 
 import Availability from "../components/Availability";
 import Cases from "../components/Cases";
+import CookiesSnackbar from "../components/CookiesSnackbar";
 import Footer from "../components/Footer";
 // import TechnologiesList from "../components/TechnologiesList";
 import WorkCTA from "../components/WorkCTA";
@@ -22,6 +23,7 @@ const Home: NextPage = (): React.ReactElement => {
   }
   return (
     <div className={NAME}>
+      <CookiesSnackbar />
       <Availability />
       <div className={`${NAME}__header-wrapper`}>
         <header className={`${NAME}__header`}>
