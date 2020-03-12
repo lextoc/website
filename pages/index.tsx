@@ -5,9 +5,9 @@ import ReactGA from "react-ga";
 import Availability from "../components/Availability";
 import Cases from "../components/Cases";
 import Footer from "../components/Footer";
-import TechnologiesList from "../components/TechnologiesList";
+// import TechnologiesList from "../components/TechnologiesList";
 import WorkCTA from "../components/WorkCTA";
-import ANALYTICS from "../src/analytics";
+// import ANALYTICS from "../src/analytics";
 import "./index.scss";
 
 const NAME: string = "Home";

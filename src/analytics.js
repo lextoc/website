@@ -1,6 +1,13 @@
 import ReactGA from "react-ga";
 
 const ANALYTICS = {
+  handleCaseCardClick: data => {
+    ReactGA.event({
+      category: "Cases",
+      action: "Clicked CaseCard",
+      label: `${data.name}`
+    });
+  },
   handleMailClick: () => {
     ReactGA.event({
       category: "Contact",

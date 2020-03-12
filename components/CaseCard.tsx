@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./CaseCard.scss";
+import ANALYTICS from "../src/analytics";
 
 const NAME: string = "CaseCard";
 
@@ -13,6 +14,11 @@ type Props = {
  * not.
  */
 const CaseCard: React.FC<Props> = ({ data }): React.ReactElement => {
+  const handleClick = (e: any) => {
+    e.preventDefault();
+    ANALYTICS.handleCaseCardClick(data);
+    window.history.pushState({}, data.link);
+  };
   return (
     <a
       className={`${NAME}${data.image ? "" : ` ${NAME}--solid-background`}`}
@@ -23,6 +29,7 @@ const CaseCard: React.FC<Props> = ({ data }): React.ReactElement => {
       target="_blank"
       rel="noopener noreferrer"
       title={data.name}
+      onClick={e => handleClick(e)}
     >
       <div className={`${NAME}__inner`}>
         <h4>{data.name}</h4>
