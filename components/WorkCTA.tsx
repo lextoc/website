@@ -45,7 +45,7 @@ const WorkCTA: React.FC = (): React.ReactElement => {
                 title="Call me"
                 className="btn btn--white"
               >
-                Or call me directly
+                Tel: +32 476 43 09 97
               </a>
             </div>
           </div>
