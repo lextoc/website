@@ -33,12 +33,12 @@ const WorkCTA: React.FC = (): React.ReactElement => {
             <div className="btns">
               <a
                 href="mailto:alexander.claes10@gmail.com?subject=Let's get in touch!"
-                title="Mail me"
+                title="Email me"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn--primary"
               >
-                Get in touch by mail
+                Get in touch by email
               </a>
               <a
                 href="tel:0032476430997"
