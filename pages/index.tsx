@@ -28,7 +28,7 @@ const Home: NextPage = (): React.ReactElement => {
       <div className={`${NAME}__header-wrapper`}>
         <header className={`${NAME}__header`}>
           <img
-            src="/avatar.jpg"
+            src="/avatar.png"
             alt="Alexander Claes"
             className={`${NAME}__avatar`}
           />
