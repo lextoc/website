@@ -15,7 +15,7 @@ const CASES = [
     name: "World Wide Wet",
     description:
       "Online survey for Goedele Liekens, a famous Belgian sexologist",
-    image: "https://goedele.com/storage/5308/WWW-1140x660.jpeg",
+    image: "/wwwet.png",
     link: "https://worldwide-wet.com/"
   },
   {
