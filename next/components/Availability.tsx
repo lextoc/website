@@ -11,6 +11,7 @@ const NAME: string = "Availability";
 const Availability: React.FC = (): React.ReactElement => {
   return (
     <aside className={NAME}>
+      <p className={`${NAME}__hidden-message`}>Currently available for new opportunities!</p>
       <a
         href="mailto:alexander.claes10@gmail.com?subject=I've got work for you!"
         title="Mail me"
@@ -18,7 +19,7 @@ const Availability: React.FC = (): React.ReactElement => {
         rel="noopener noreferrer"
         className={`${NAME}__inner`}
       >
-        <p>Currently available for new opportunities!</p>
+        <p className={`${NAME}__message`}>Currently available for new opportunities!</p>
       </a>
     </aside>
   );

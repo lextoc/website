@@ -27,33 +27,38 @@
     &:focus {
       background: rgba(lighten($dark, 12%), 0.925);
     }
+  }
 
-    p {
-      max-width: none;
-      margin: 0;
-      color: rgba(white, 0.8);
-      padding: 0.1em 1em 0;
-      font-size: 0.9rem;
-      font-weight: 700;
-      line-height: 2em;
-      overflow: hidden;
+  &__hidden-message {
+    visibility: hidden;
+  }
 
-      @media (min-width: $xs-sm) {
-        font-size: 0.97rem;
-        padding: 0.25em 1em 0.15em;
-      }
+  &__hidden-message,
+  &__message {
+    max-width: none;
+    margin: 0;
+    color: rgba(white, 0.8);
+    padding: 0.1em 1em 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 2em;
+    overflow: hidden;
 
-      &::before {
-        content: "";
-        display: inline-block;
-        margin-right: 0.6em;
-        width: 7px;
-        height: 7px;
-        vertical-align: 2px;
-        border-radius: 50%;
-        background: $primary;
-        animation: blink 2s ease-in-out infinite;
-      }
+    @media (min-width: $xs-sm) {
+      font-size: 0.97rem;
+      padding: 0.25em 1em 0.15em;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      margin-right: 0.6em;
+      width: 7px;
+      height: 7px;
+      vertical-align: 2px;
+      border-radius: 50%;
+      background: $primary;
+      animation: blink 2s ease-in-out infinite;
     }
   }
 }
