@@ -1,23 +1,31 @@
 import { NextPage } from "next";
+import fetch from 'node-fetch';
+import { GetStaticProps } from 'next'
 import React from "react";
 import ReactGA from "react-ga";
 
-import Availability from "../components/Availability";
+import Notification from "../components/Notification";
 import Cases from "../components/Cases";
 import CookiesSnackbar from "../components/CookiesSnackbar";
 import Footer from "../components/Footer";
 import HomeHeader from '../components/index/HomeHeader';
-// import TechnologiesList from "../components/TechnologiesList";
 import WorkCTA from "../components/WorkCTA";
-// import ANALYTICS from "../src/analytics";
 import "./index.scss";
 
 const NAME: string = "Home";
 
+type Props = {
+  notification?: {
+    content: string,
+    link: string,
+    visible: boolean;
+  };
+};
+
 /**
  * Represents the homepage.
  */
-const Home: NextPage = (): React.ReactElement => {
+const Home: NextPage<Props> = ({ notification }): React.ReactElement => {
   if (process.browser) {
     ReactGA.initialize("UA-86155073-2");
     ReactGA.pageview(window.location.pathname + window.location.search);
@@ -25,7 +33,7 @@ const Home: NextPage = (): React.ReactElement => {
   return (
     <div className={NAME}>
       <CookiesSnackbar />
-      <Availability />
+      <Notification notification={notification} />
       <HomeHeader />
       <WorkCTA />
       <Cases />
@@ -78,14 +86,9 @@ const Home: NextPage = (): React.ReactElement => {
               </a>
               ?
             </p>
-            {/* <div className="btns">
-              <button className="btn btn--primary">Tell me more</button>
-              <button className="btn">Best practices?</button>
-            </div> */}
           </div>
         </div>
       </section>
-      {/* <TechnologiesList /> */}
       <WorkCTA />
       {/* <div className="container">
         <div className={`${NAME}__cta inner`}>
@@ -96,5 +99,11 @@ const Home: NextPage = (): React.ReactElement => {
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps = async context => {
+  const res = await fetch('http://localhost:1337/notification')
+  const notification = await res.json()
+  return { props: { notification } };
+}
 
 export default Home;
