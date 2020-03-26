@@ -13,81 +13,6 @@
 }
 
 .Home {
-  &__header-wrapper {
-    background-color: white;
-    background: radial-gradient(
-      white,
-      rgba($primary, 0.005),
-      rgba($primary, 0.01)
-    );
-  }
-
-  &__header {
-    background-color: white;
-    background: url("/dots.png") repeat center;
-    mix-blend-mode: multiply;
-    position: relative;
-    text-align: center;
-    padding: 2rem 1rem calc(1rem + 40px);
-    position: relative;
-
-    @media (min-width: $sm) {
-      padding: 3rem 1rem calc(3rem + 40px);
-    }
-
-    @media (min-width: $md) {
-      padding-top: 7rem;
-      padding-bottom: calc(7rem + 80px);
-    }
-
-    & > * {
-      position: relative;
-      z-index: 2;
-    }
-
-    h1 {
-      display: inline-block;
-      margin: 0 auto;
-      color: $dark;
-      background: white;
-    }
-
-    .sub {
-      margin-bottom: 1em;
-      border: 4px solid white;
-      background: #e8f8f3;
-    }
-
-    .description {
-      max-width: 30em;
-      margin: 0.5em auto 1.5em;
-      padding-top: 0.5em;
-      background: white;
-    }
-  }
-
-  &__avatar {
-    display: block;
-    border-radius: 50%;
-    border: 8px solid white;
-    margin: 0 auto 0.75rem;
-    width: 156px;
-    height: auto;
-
-    @media (min-width: $md) {
-      margin-bottom: 2rem;
-      width: 176px;
-    }
-  }
-
-  &__title {
-    display: inline-block;
-
-    @media (min-width: $md) {
-      border-bottom: 9px solid $primary;
-    }
-  }
-
   &__cta {
     margin: 0 auto -40px;
     width: 100%;
@@ -178,7 +103,7 @@
     }
   }
 
-  &__header-wrapper + .WorkCTA {
+  .HomeHeader + .WorkCTA {
     padding-bottom: 80px;
 
     @media (min-width: $md) {

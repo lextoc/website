@@ -6,6 +6,7 @@ import Availability from "../components/Availability";
 import Cases from "../components/Cases";
 import CookiesSnackbar from "../components/CookiesSnackbar";
 import Footer from "../components/Footer";
+import HomeHeader from '../components/index/HomeHeader';
 // import TechnologiesList from "../components/TechnologiesList";
 import WorkCTA from "../components/WorkCTA";
 // import ANALYTICS from "../src/analytics";
@@ -25,24 +26,7 @@ const Home: NextPage = (): React.ReactElement => {
     <div className={NAME}>
       <CookiesSnackbar />
       <Availability />
-      <header className={`${NAME}__header-wrapper`}>
-        <div className={`${NAME}__header`}>
-          <img
-            src="/avatar.png"
-            alt="Alexander Claes"
-            className={`${NAME}__avatar`}
-          />
-          <div className={`${NAME}__title`}>
-            <p className="sub">I&apos;m Alexander Claes, a professional ...</p>
-            <br />
-            <h1>Full Stack Web Engineer</h1>
-          </div>
-          <p className="large description">
-            ... building web applications with a passion for UI &amp; UX. I love
-            keeping code simple and scalable. Based in Antwerp, Belgium.
-          </p>
-        </div>
-      </header>
+      <HomeHeader />
       <WorkCTA />
       <Cases />
       <section className="container">
