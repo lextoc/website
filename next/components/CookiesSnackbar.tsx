@@ -3,7 +3,7 @@ import Portal from "@material-ui/core/Portal";
 import Snackbar from "@material-ui/core/Snackbar";
 import React, { Component } from "react";
 
-// Represents a cookies disclaimer.
+/** Represents a cookies disclaimer. */
 class CookiesSnackbar extends Component<{}, { isAccepted: boolean }> {
   /**
    * Constructs a CookiesSnackbar.
@@ -16,7 +16,7 @@ class CookiesSnackbar extends Component<{}, { isAccepted: boolean }> {
   }
 
   /**
-   * Bring accepted state up to date.
+   * Brings accepted state up to date.
    */
   componentDidMount() {
     this.setState({
