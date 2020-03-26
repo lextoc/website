@@ -1,5 +1,17 @@
 @import "../src/variables";
 
+@keyframes blink {
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+}
+
 .Availability {
   position: relative;
   min-height: 1.75rem;

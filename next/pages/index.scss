@@ -1,17 +1,5 @@
 @import "../src/variables";
 
-@keyframes blink {
-  30% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 1;
-  }
-}
-
 .Home {
   &__cta {
     margin: 0 auto -40px;
