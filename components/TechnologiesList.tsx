@@ -9,7 +9,7 @@ const NAME: string = "TechnologiesList";
  */
 const TechnologiesList: React.FC = (): React.ReactElement => {
   return (
-    <div className={NAME}>
+    <section className={NAME}>
       <div className="container">
         <div className={`${NAME}__inner inner`}>
           <a
@@ -80,7 +80,7 @@ const TechnologiesList: React.FC = (): React.ReactElement => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

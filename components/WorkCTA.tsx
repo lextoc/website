@@ -9,7 +9,7 @@ const NAME: string = "WorkCTA";
  */
 const WorkCTA: React.FC = (): React.ReactElement => {
   return (
-    <div className={NAME}>
+    <section className={NAME}>
       <div className="container">
         <div className={`${NAME}__inner inner`}>
           <div>
@@ -56,7 +56,7 @@ const WorkCTA: React.FC = (): React.ReactElement => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

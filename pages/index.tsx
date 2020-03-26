@@ -25,8 +25,8 @@ const Home: NextPage = (): React.ReactElement => {
     <div className={NAME}>
       <CookiesSnackbar />
       <Availability />
-      <div className={`${NAME}__header-wrapper`}>
-        <header className={`${NAME}__header`}>
+      <header className={`${NAME}__header-wrapper`}>
+        <div className={`${NAME}__header`}>
           <img
             src="/avatar.png"
             alt="Alexander Claes"
@@ -41,11 +41,11 @@ const Home: NextPage = (): React.ReactElement => {
             ... building web applications with a passion for UI &amp; UX. I love
             keeping code simple and scalable. Based in Antwerp, Belgium.
           </p>
-        </header>
-      </div>
+        </div>
+      </header>
       <WorkCTA />
       <Cases />
-      <div className="container">
+      <section className="container">
         <div className={`${NAME}__about-me inner`}>
           <figure>
             <img src="/rocket.svg" alt="Rocket" />
@@ -100,7 +100,7 @@ const Home: NextPage = (): React.ReactElement => {
             </div> */}
           </div>
         </div>
-      </div>
+      </section>
       {/* <TechnologiesList /> */}
       <WorkCTA />
       {/* <div className="container">

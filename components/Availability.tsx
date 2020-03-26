@@ -10,7 +10,7 @@ const NAME: string = "Availability";
  */
 const Availability: React.FC = (): React.ReactElement => {
   return (
-    <div className={NAME}>
+    <aside className={NAME}>
       <a
         href="mailto:alexander.claes10@gmail.com?subject=I've got work for you!"
         title="Mail me"
@@ -20,7 +20,7 @@ const Availability: React.FC = (): React.ReactElement => {
       >
         <p>Currently available for new opportunities!</p>
       </a>
-    </div>
+    </aside>
   );
 };
 

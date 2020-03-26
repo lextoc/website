@@ -52,7 +52,7 @@ const NAME: string = "Cases";
  */
 const Cases: React.FC = (): React.ReactElement => {
   return (
-    <div className={NAME} id={NAME}>
+    <section className={NAME} id={NAME}>
       <div className={`${NAME}__container container`}>
         <div className={`${NAME}__inner inner`}>
           <div className={`${NAME}__content`}>
@@ -63,15 +63,15 @@ const Cases: React.FC = (): React.ReactElement => {
             </p>
             <div className={`${NAME}__list`}>
               {CASES.map(data => (
-                <div key={data.name} className={`${NAME}__CaseCard`}>
+                <article key={data.name} className={`${NAME}__CaseCard`}>
                   <CaseCard data={data} />
-                </div>
+                </article>
               ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
