@@ -1,14 +1,14 @@
 import { NextPage } from "next";
-import fetch from 'node-fetch';
-import { GetStaticProps } from 'next'
+import { GetStaticProps } from "next";
+import fetch from "node-fetch";
 import React from "react";
 import ReactGA from "react-ga";
 
-import Notification from "../components/Notification";
 import Cases from "../components/Cases";
 import CookiesSnackbar from "../components/CookiesSnackbar";
 import Footer from "../components/Footer";
-import HomeHeader from '../components/index/HomeHeader';
+import HomeHeader from "../components/index/HomeHeader";
+import Notification from "../components/Notification";
 import WorkCTA from "../components/WorkCTA";
 import "./index.scss";
 
@@ -16,8 +16,8 @@ const NAME: string = "Home";
 
 type Props = {
   notification?: {
-    content: string,
-    link: string,
+    content: string;
+    link: string;
     visible: boolean;
   };
 };
@@ -100,10 +100,10 @@ const Home: NextPage<Props> = ({ notification }): React.ReactElement => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async context => {
-  const res = await fetch('http://localhost:1337/notification')
-  const notification = await res.json()
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await fetch("http://localhost:1337/notification");
+  const notification = await res.json();
   return { props: { notification } };
-}
+};
 
 export default Home;
