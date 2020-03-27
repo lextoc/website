@@ -101,9 +101,13 @@ const Home: NextPage<Props> = ({ notification }): React.ReactElement => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("http://localhost:1337/notification");
-  const notification = await res.json();
-  return { props: { notification } };
+  try {
+    const res = await fetch("http://localhost:1337/notification");
+    const notification = await res.json();
+    return { props: { notification } };
+  } catch (err) {
+    return { props: { notification: null } };
+  }
 };
 
 export default Home;
