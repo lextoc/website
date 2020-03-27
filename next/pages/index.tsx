@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 import fetch from "node-fetch";
 import React from "react";
 import ReactGA from "react-ga";
@@ -93,7 +93,7 @@ const Home: NextPage<Props> = ({ notification, cases }): React.ReactElement => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   let props = { notification: null, cases: [] };
   try {
     const res = await fetch("http://localhost:1337/notification");
