@@ -11,21 +11,19 @@ import HomeHeader from "../components/index/HomeHeader";
 import Notification from "../components/Notification";
 import WorkCTA from "../components/WorkCTA";
 import "./index.scss";
+import { INotification, ICaseObj } from "../src/interfaces";
 
 const NAME: string = "Home";
 
 type Props = {
-  notification?: {
-    content: string;
-    link: string;
-    visible: boolean;
-  };
+  notification?: INotification;
+  cases: ICaseObj[];
 };
 
 /**
  * Represents the homepage.
  */
-const Home: NextPage<Props> = ({ notification }): React.ReactElement => {
+const Home: NextPage<Props> = ({ notification, cases }): React.ReactElement => {
   if (process.browser) {
     ReactGA.initialize("UA-86155073-2");
     ReactGA.pageview(window.location.pathname + window.location.search);
@@ -36,7 +34,7 @@ const Home: NextPage<Props> = ({ notification }): React.ReactElement => {
       <Notification notification={notification} />
       <HomeHeader />
       <WorkCTA />
-      <Cases />
+      <Cases cases={cases} />
       <section className="container">
         <div className={`${NAME}__about-me inner`}>
           <figure>
@@ -96,13 +94,20 @@ const Home: NextPage<Props> = ({ notification }): React.ReactElement => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  let props = { notification: null, cases: [] };
   try {
     const res = await fetch("http://localhost:1337/notification");
-    const notification = await res.json();
-    return { props: { notification } };
+    props.notification = await res.json();
   } catch (err) {
-    return { props: { notification: null } };
+    console.warn(err);
   }
+  try {
+    const res = await fetch("http://localhost:1337/cases?visible=true");
+    props.cases = await res.json();
+  } catch (err) {
+    console.warn(err);
+  }
+  return { props };
 };
 
 export default Home;

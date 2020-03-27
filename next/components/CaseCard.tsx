@@ -2,38 +2,43 @@ import React from "react";
 
 import "./CaseCard.scss";
 import ANALYTICS from "../src/analytics";
+import { ICaseObj } from "../src/interfaces";
 
 const NAME: string = "CaseCard";
 
 type Props = {
-  data: any;
+  caseObj: ICaseObj;
 };
 
 /**
  * Represents a bar indicating whether I'm available for new opportunities or
  * not.
  */
-const CaseCard: React.FC<Props> = ({ data }): React.ReactElement => {
+const CaseCard: React.FC<Props> = ({ caseObj }): React.ReactElement => {
   const handleClick = (e: any) => {
     e.preventDefault();
-    ANALYTICS.handleCaseCardClick(data);
-    window.location.href = data.link;
+    ANALYTICS.handleCaseCardClick(caseObj);
+    window.location.href = caseObj.link;
   };
   return (
     <a
-      className={`${NAME}${data.image ? "" : ` ${NAME}--solid-background`}`}
+      className={`${NAME}${
+        caseObj.cardimage?.url ? "" : ` ${NAME}--solid-background`
+      }`}
       style={{
-        backgroundImage: data.image ? `url("${data.image}")` : undefined
+        backgroundImage: caseObj.cardimage?.url
+          ? `url("http://localhost:1337/${caseObj.cardimage?.url}")`
+          : undefined
       }}
-      href={data.link}
+      href={caseObj.link}
       target="_blank"
       rel="noopener noreferrer"
-      title={data.name}
+      title={caseObj.name}
       onClick={e => handleClick(e)}
     >
       <div className={`${NAME}__inner`}>
-        <h4>{data.name}</h4>
-        <p className="small">{data.description}</p>
+        <h4>{caseObj.name}</h4>
+        <p className="small">{caseObj.description}</p>
       </div>
     </a>
   );
