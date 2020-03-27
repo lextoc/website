@@ -3,6 +3,7 @@ import React from "react";
 import "./CaseCard.scss";
 import ANALYTICS from "../src/analytics";
 import { ICaseObj } from "../src/interfaces";
+import { getStrapiUrl } from "../src/util";
 
 const NAME: string = "CaseCard";
 
@@ -27,7 +28,7 @@ const CaseCard: React.FC<Props> = ({ caseObj }): React.ReactElement => {
       }`}
       style={{
         backgroundImage: caseObj.cardimage?.url
-          ? `url("http://localhost:1337/${caseObj.cardimage?.url}")`
+          ? `url("${getStrapiUrl()}/${caseObj.cardimage?.url}")`
           : undefined
       }}
       href={caseObj.link}
