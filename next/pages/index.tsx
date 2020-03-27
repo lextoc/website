@@ -90,11 +90,6 @@ const Home: NextPage<Props> = ({ notification }): React.ReactElement => {
         </div>
       </section>
       <WorkCTA />
-      {/* <div className="container">
-        <div className={`${NAME}__cta inner`}>
-          <h3>Subscribe to my newsletter</h3>
-        </div>
-      </div> */}
       <Footer />
     </div>
   );
