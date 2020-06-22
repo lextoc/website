@@ -40,6 +40,6 @@
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.20.0",
-    "@typescript-eslint/parser": "^2.20.0"
+    "@typescript-eslint/parser": "^2.34.0"
   }
 }
